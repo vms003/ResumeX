@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Resume</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Generated Resume</a>
+    </nav>
+
+    <div class="container mt-5">
+
+        <div class="main-content">
+
+            <!-- Personal Details -->
+            <h1><%= resume.name %></h1>
+            <p>Email: <%= resume.email %></p>
+            <p>Phone: <%= resume.phone %></p>
+            <p>Address: <%= resume.address %></p>
+
+            <!-- Summary -->
+            <h2>Summary</h2>
+            <p><%= resume.summary %></p>
+
+            <!-- Experience -->
+            <h2>Experience</h2>
+            <% resume.experienceTitle.forEach((title, index) => { %>
+                <h3><%= title %></h3>
+                <p><%= resume.experienceDescription[index] %></p>
+            <% }); %>
+
+            <!-- Education -->
+            <h2>Education</h2>
+            <% resume.educationTitle.forEach((title, index) => { %>
+                <h3><%= title %></h3>
+                <p><%= resume.educationDescription[index] %></p>
+            <% }); %>
+
+        </div>
+
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; 2024 ResumeX</p>
+        </div>
+    </footer>
+
+    <script src="/js/scripts.js"></script>
+</body>
+</html>

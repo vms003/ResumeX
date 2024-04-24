@@ -1,0 +1,164 @@
+/* Reset and Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 30px;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #fff;
+    color: #333;
+    padding: 15px 30px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Main Content Styles */
+.main-content {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styles */
+.form-control {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Buttons Styles */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    margin-right: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    background-color: #007bff;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.remove-btn {
+    background-color: #dc3545;
+}
+
+.remove-btn:hover {
+    background-color: #c82333;
+}
+
+/* Resume Preview Styles */
+.resume-preview {
+    background-color: #fff;
+    padding: 40px;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience Section Styles */
+.experience {
+    margin-bottom: 30px;
+}
+
+.experience-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+    .container {
+        padding: 25px;
+    }
+
+    .btn {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 12px;
+    }
+
+    .form-control {
+        padding: 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 10px;
+    }
+
+    .form-control {
+        padding: 12px;
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ResumeX</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">ResumeX</a>
+    </nav>
+
+    <div class="container mt-5">
+
+        <div class="main-content">
+            <h1>Create Your Resume</h1>
+
+            <form id="resumeForm">
+                <!-- Personal Details -->
+                <h2>Personal Details</h2>
+                <input type="text" class="form-control mb-3" name="name" placeholder="Full Name" required>
+                <input type="email" class="form-control mb-3" name="email" placeholder="Email" required>
+                <input type="tel" class="form-control mb-3" name="phone" placeholder="Phone" required>
+                <input type="text" class="form-control mb-3" name="address" placeholder="Address" required>
+
+                <!-- Summary -->
+                <h2>Summary</h2>
+                <textarea class="form-control mb-3" name="summary" placeholder="Summary" rows="4" required></textarea>
+
+                <!-- Experience Fields -->
+                <h2>Experience</h2>
+                <div id="experienceFields">
+                    <div class="experience-item mb-3">
+                        <input type="text" class="form-control" name="experienceTitle[]" placeholder="Title" required>
+                        <textarea class="form-control mt-2" name="experienceDescription[]" placeholder="Description" rows="2" required></textarea>
+                        <button type="button" class="btn btn-danger mt-2 remove-btn">Remove</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary" id="addExperience">Add Experience</button>
+
+                <!-- Education Fields -->
+                <h2>Education</h2>
+                <div id="educationFields">
+                    <div class="education-item mb-3">
+                        <input type="text" class="form-control" name="educationTitle[]" placeholder="Degree" required>
+                        <textarea class="form-control mt-2" name="educationDescription[]" placeholder="Institution" rows="2" required></textarea>
+                        <button type="button" class="btn btn-danger mt-2 remove-btn">Remove</button>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-secondary" id="addEducation">Add Education</button>
+
+                <!-- Theme Options -->
+                <div class="theme-options mb-4">
+                    <label for="theme">Choose a Theme:</label>
+                    <select class="form-control" id="theme">
+                        <option value="default">Default</option>
+                        <option value="modern">Modern</option>
+                        <option value="simple">Simple</option>
+                    </select>
+                </div>
+
+                <!-- Save Resume -->
+                <div class="save-resume mb-4">
+                    <button type="button" class="btn btn-success" id="saveResume">Save Resume</button>
+                </div>
+
+                <!-- Buttons -->
+                <button type="submit" class="btn btn-primary mt-3">Generate Resume</button>
+                <button type="button" class="btn btn-secondary ml-2" id="previewBtn">Preview Resume</button>
+                <button type="button" class="btn btn-secondary ml-2" id="downloadBtn" disabled>Download PDF</button>
+                <button type="button" class="btn btn-danger ml-2" id="resetBtn">Reset</button>
+            </form>
+
+        </div>
+
+        <!-- Preview Section -->
+        <div id="previewSection" class="resume-preview mt-5">
+            <!-- Generated Resume will be displayed here -->
+        </div>
+
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container">
+            <p>&copy; 2024 Resume Builder</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script src="/js/scripts.js"></script>
+</body>
+</html>
